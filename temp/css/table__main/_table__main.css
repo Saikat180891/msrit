@@ -1,0 +1,64 @@
+.table__main {
+  width: 100%;
+  height: 718px;
+
+  &__sidebar {
+    float: left;
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: $darkBlue;
+    color: #fff;
+  }
+  &__list {
+    width: 100%;
+  }
+  &__list__item {
+    float: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  &__list__item:hover {
+    background-color: #3b63a5;
+    border-right: 5px solid #98f25c;
+  }
+  &__tablebox {
+    float: right;
+    width: 85%;
+    height: 100%;
+    background-color: #f2f2f2;
+
+    &__topbar {
+      height: 100px;
+      width: 100%;
+      background-color: #9beff7;
+      position: fixed;
+
+      &__list {
+        margin-top: 50px;
+
+        &__item {
+          height: 50px;
+          padding: 15px 30px;
+          cursor: pointer;
+          font-weight: 700;
+          color: #fff;
+          margin-right: 1px;
+          cursor: pointer;
+
+          &__green {
+            background-color: #98f25c;
+          }
+          &__blue {
+            background-color: #5dc1f7;
+          }
+        }
+      }
+    }
+  }
+}
+.table__down {
+  top: 50px;
+}

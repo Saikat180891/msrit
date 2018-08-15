@@ -1,0 +1,91 @@
+//how to use gulp
+
+step 1: create the package.json
+        npm init
+step 2: install gulp as dev dependency
+        npm install gulp-cli -g                 ===>install gulp as global
+        or
+        npm install gulp-cli --save-dev         ===>install gulp locally
+step 3: create a js file and name it as 'gulpfile.js'
+step 4: to check if gulp working or not type 'gulp' in command line
+        it will return "Task 'default' is not in your gulpfile" this means that
+        gulp is installed but it is not able to find the 'default' task
+step 5: create a gulp task in gulpfile.js
+
+        gulp.task('default', function(){
+            console.log('The default task');
+        });
+step 6: run 'gulp' in command line
+        the output will be 'The default task is called'
+step 7: create another task
+
+        gulp.task('HTML', function(){
+            console.log('The .html file is modified');
+        });
+        gulp.task('CSS', function(){
+            console.log('The .css file is modified');
+        });
+        gulp.task('JS', function(){
+            console.log('The .js file is modified');
+        });
+
+        gulp.task("styles", function() {
+            console.log('modifying the main css file...');
+            /*using postcss the main css file can be modified such that the the developer 
+            won't have to worry about the vendor plugins. Post css will automatically add all
+            necessary plugins*/
+
+            return gulp.src("temp/css/main/styles.css").pipe(gulp.dest("css"));
+            /*
+            the gulp.src() function takes the source file and it pipes or generates a file 
+            which contains the modified file
+            */
+        });
+
+step 8: to run the above task type 'gulp HTML' in command line
+step 9: now install gulp-watch, type 'npm install gulp-watch --save-dev'
+step 10: import gulp watch in gulpfile.js
+         var gulpWatch = require('gulp-watch');
+step 11: write the follow code in gulpfile.js to create a watch task
+         
+         gulp.task('watch', function(){
+             gulpWatch('<filename ex: index.html>', function(){                             //attach the file to watch
+                 gulp.start('HTML');                                                        //call the HTML task
+             });
+         });
+step 12: run 'gulp watch' in command line
+         to stop watching press ctrl+c
+step 13: to create multiple watch task just add the files to watch in the watch task
+
+         gulp.task('watch', function(){
+             gulpWatch('<filename ex: index.html>', function(){                             //attach the file to watch
+                 gulp.start('HTML');                                                        //call the HTML task
+             });
+             gulpWatch('<filename ex: styles.css>', function(){                             //attach the file to watch
+                 gulp.start('CSS');                                                         //call the HTML task
+             });
+             gulpWatch('<filename ex: script.js>', function(){                              //attach the file to watch
+                 gulp.start('JS');                                                          //call the HTML task
+             });
+             //to add multiple files to watch task
+             gulpWatch('./<root folder>/**/*.<css or html or js>', function(){              //attach the file to watch
+                 gulp.start('Multiple .css files modified');                                //call the HTML task
+             });
+
+             gulpWatch("temp/css/**/*.css", function() {
+                 gulp.start("styles");                                                      //call the HTML task
+             });
+
+         });
+
+         //==>./temp/**/*.js this code means to select all folder inside main and then all 
+         //    the .js files inside /**/ folder
+
+step 14: to install postCSS
+         npm install postcss --save-dev
+         npm install autoprefixer --save-dev
+         npm install postcss-simple-vars --save-dev
+         npm install postcss-nested --save-dev
+         npm install postcss-import --save-dev
+         npm install normalize.css --save
+         npm install browser-sync --save-dev

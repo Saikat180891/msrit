@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="navbar__brand"></div>
+            <div class="navbar__menu">
+                <ul class="navbar__list">
+                    <li class="navbar__list__item">HOME</li>
+                    <li class="navbar__list__item">ABOUT</li>
+                    <li id="department" class="navbar__list__item">DEPARTMENTS</li>
+                    <li class="navbar__list__item">CONTACT</li>
+                </ul>
+            </div>
+            <div class="navbar__login btn btn__orange">
+                <a href="#" id="login">Logout</a>
+            </div>
+
+        </div>
+        </div>
+
+    </nav>
+    <div class="menu__extended table__down">
+
+        <div class="menu__extended__item">
+            <i class="fas fa-brain"></i>
+            <p>Neurology</p>
+        </div>
+
+        <div class="menu__extended__item">
+            <i class="fas fa-capsules"></i>
+            <p>Medicine</p>
+        </div>
+
+        <div class="menu__extended__item">
+            <i class="fas fa-heartbeat"></i>
+            <p>Cardio</p>
+        </div>
+
+        <div class="menu__extended__item">
+            <i class="fas fa-brain"></i>
+            <p>hello</p>
+        </div>
+
+        <div class="menu__extended__item">
+            <i class="fas fa-brain"></i>
+            <p>hello</p>
+        </div>
+
+        <div class="menu__extended__item">
+            <i class="fas fa-brain"></i>
+            <p>hello</p>
+        </div>
+
+    </div>
+
+    <main>
+
+        <div class="table__main">
+            <div class="table__main__sidebar">
+                <ul class="table__main__list">
+                    <li class="table__main__list__item">Epilepsy</li>
+                    <li class="table__main__list__item">Headache</li>
+                    <li class="table__main__list__item">Migrain</li>
+                    <li class="table__main__list__item">Stroke</li>
+                    <li class="table__main__list__item">Alzeimer's Disease</li>
+                    <li class="table__main__list__item">Dementia</li>
+                </ul>
+            </div>
+            <div class="table__main__tablebox">
+                <div class="table__main__tablebox__topbar">
+                    <ul class="table__main__tablebox__topbar__list">
+                        <li class="table__main__tablebox__topbar__list__item table__main__tablebox__topbar__list__item__green">Build</li>
+                        <li class="table__main__tablebox__topbar__list__item table__main__tablebox__topbar__list__item__blue">Publish</li>
+                        <li class="table__main__tablebox__topbar__list__item table__main__tablebox__topbar__list__item__green" onclick="sh()">Entries</li>
+                    </ul>
+                </div>
+                <!-- 
+                <div class="table__main__tablebox__mainbody">
+                    <div class="table__structure">
+                        <div class="table__structure__body">
+                            <label for="">Firstname</label>
+                            <input type="text" placeholder="Firstname">
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Lastname</label>
+                            <input type="text" placeholder="Lastname">
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Age</label>
+                            <input type="number" placeholder="Age">
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="T">Transgender</option>
+                            </select>
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Date of Birth</label>
+                            <input id="datepicker" type="text" placeholder="Date of birth">
+                        </div>
+                        <div class="table__structure__body table__structure__body__wrapper">
+                            <label for="">Address</label>
+                            <input class="inp inp__length__100" type="text" placeholder="Address Line 1">
+                            <input class="inp inp__length__100" type="text" placeholder="Address Line 2">
+                            <div style="display: table;">
+                                <input class="inp inp__length__25" type="text" placeholder="City" style="margin-right: 2%;">
+                                <input class="inp inp__length__25" type="text" placeholder="State" style="margin-right: 2%;">
+                                <input class="inp inp__length__25" type="number" placeholder="Pincode" style="margin-right: 2%;">
+                                <input class="inp inp__length__25" type="text" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="table__structure__body table__structure__body__contact">
+                            <label for="">Contact Details</label>
+                            <div style="display: table;">
+                                <input type="email" placeholder="Email" style="margin-right: 6%;">
+                                <input type="number" placeholder="Mobile">
+                            </div>
+                        </div>
+                        <div class="table__structure__body table__structure__body__disease">
+                            <label for="">Disease</label>
+                            <div style="display: table;">
+                                <input type="text" placeholder="Disease" style="margin-right: 6%;">
+                                <input type="text" placeholder="Type">
+                            </div>
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Attachnents</label>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="table__structure__body">
+                            <label for="">Comments</label>
+                            <textarea name="coment" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="table__structure__body">
+                            <div class="btn btn__large btn__orange">
+                                <a href="#">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <div class="table__footer">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="login__modal">
+        <div class="login__modal__close">
+            <div class="login__modal__close__dash"></div>
+            <div class="login__modal__close__dash"></div>
+        </div>
+        <div class="login__modal__box">
+            <div class="login__modal__details">
+                <p class="login__modal__label">Login here</p>
+            </div>
+            <div class="login__modal__details">
+                <input class="login__modal__input" type="name" placeholder="Username or Email">
+                <input class="login__modal__input" type="password" placeholder="Password">
+            </div>
+            <div class="login__modal__details login__modal__wraper">
+                <div>
+                    <a href="" class="login__modal__btn login__modal__btn__green">Login</a>
+                </div>
+                <div>
+                    <a href="" class="login__modal__btn login__modal__btn__orange">Sign Up</a>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <a href="" class="">Remember me</a>
+                    <a href="" class="forget_password">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="login__modal__details login__modal__wraper">
+                <div>
+                    <a href="" class="login__modal__btn login__modal__btn__sm login__modal__btn__darkblue">Facebook</a>
+                </div>
+                <div>
+                    <a href="" class="login__modal__btn login__modal__btn__sm login__modal__btn__red">Google</a>
+                </div>
+                <div>
+                    <a href="" class="login__modal__btn login__modal__btn__sm login__modal__btn__blue">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.headline {
+  font-weight: 300;
+  &__h1 {
+    font-weight: 100;
+    font-size: 30px;
+    color: $darkBlue;
+    text-shadow: 0px 2px 5px rgba(139, 145, 158, 0.5);
+    margin-bottom: 0px;
+
+    @mixin atLarge {
+      font-size: 80px;
+    }
+  }
+  &__h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+    @mixin atLarge {
+      font-size: 30px;
+    }
+  }
+}

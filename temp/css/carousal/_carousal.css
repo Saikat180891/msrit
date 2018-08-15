@@ -1,0 +1,19 @@
+.carousal {
+  width: 100%;
+  position: relative;
+  top: 50px;
+  z-index: -10;
+  border-bottom: 10px solid $mainBlue;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  &__img {
+    width: 100%;
+    display: block;
+  }
+  &__block {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
